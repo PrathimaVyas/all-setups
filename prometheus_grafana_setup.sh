@@ -1,10 +1,10 @@
-# Install HELM
+# Install HELM and wait for a minute to setup
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
 helm version
 
-# Install Metrics Server
+# Install Metrics Server and wait for a minute
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 kubectl get pods -n kube-system
 kubectl get deployment metrics-server -n kube-system
