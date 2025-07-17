@@ -11,9 +11,7 @@ yum install java-17-amazon-corretto -y
 yum install jenkins -y
 
 #STEP-4: RESTARTING JENKINS (when we download service it will on stopped state)
-systemctl start jenkins.service
-systemctl enable jenkins.service
-systemctl status jenkins.service
 sudo mount -o remount,size=2G /tmp
-systemctl restart jenkins
+systemctl start jenkins
+systemctl enable jenkins
 cat /var/lib/jenkins/secrets/initialAdminPassword
