@@ -14,5 +14,6 @@ yum install jenkins -y
 systemctl start jenkins.service
 systemctl enable jenkins.service
 systemctl status jenkins.service
-
+sudo mount -o remount,size=2G /tmp
+systemctl restart jenkins
 cat /var/lib/jenkins/secrets/initialAdminPassword
