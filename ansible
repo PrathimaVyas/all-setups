@@ -26,7 +26,9 @@ vim /etc/ansible/hosts   (inventory file)  (below: 12 th line)
 172.31.93.101
 
 vim /etc/ansible/ansible.cfg (uncomment 14, 22)  
-or add in ansible.cfg file inventory = /etc/ansible/hosts
+or add velow 2 lines in ansible.cfg file
+[defaults]
+inventory = /etc/ansible/hosts
 
 ssh-keygen  -- > enter 4 times
 ssh-copy-id root@private_ip of dev-1 -- > yes -- > password 
