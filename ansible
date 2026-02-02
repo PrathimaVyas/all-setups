@@ -13,19 +13,20 @@ sudo -i
 5. systemctl status sshd
 
 ANSIBLE SERVER:
-amazon-linux-extras install ansible2 -y
-yum install python python-pip python-dlevel -y
+amazon-linux-extras install ansible2 -y   or sudo dnf install ansible -y
+yum install python python-pip python-dlevel -y or sudo yum install python3 python3-pip -y
 vim /etc/ansible/hosts   (inventory file)  (below: 12 th line)
 
 [dev]
-172.31.81.244
+172.31.81.244 (private IP)
 172.31.93.180
 
 [test]
 172.31.91.255
 172.31.93.101
 
-vim /etc/ansible/ansible.cfg (uncomment 14, 22)
+vim /etc/ansible/ansible.cfg (uncomment 14, 22)  
+or add in ansible.cfg file inventory = /etc/ansible/hosts
 
 ssh-keygen  -- > enter 4 times
 ssh-copy-id root@private_ip of dev-1 -- > yes -- > password 
