@@ -1,6 +1,6 @@
 # Replace the wget url with the latest version of tomcat if this script failes
 
-yum install java-17-amazon-corretto -y
+yum install java-21-amazon-corretto -y
 wget https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.24/bin/apache-tomcat-11.0.24.tar.gz
 tar -zxvf apache-tomcat-11.0.24.tar.gz 
 sed -i '56  a\<role rolename="manager-gui"/>' apache-tomcat-11.0.24/conf/tomcat-users.xml
